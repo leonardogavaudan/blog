@@ -36,7 +36,11 @@ interface postPageProps {
 const PostPage = ({ frontmatter, content }: postPageProps) => {
     return (
         <div className="prose dark:prose-invert mx-auto">
-            <h1>{frontmatter.title}</h1>
+            <div className="flex justify-center mb-16">
+                <span className="text-2xl grow">{frontmatter.title}</span>
+                <span className="">{frontmatter.date}</span>
+            </div>
+
             <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         </div>
     );
