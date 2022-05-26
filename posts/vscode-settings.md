@@ -25,7 +25,7 @@ tags:
   "editor.tabSize": 2,
 
   // Icons
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vs-minimal",
   "vsicons.dontShowNewVersionMessage": true,
   "vsicons.presets.hideFolders": false,
 
