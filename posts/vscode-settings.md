@@ -11,7 +11,7 @@ tags:
 ```
 {
   // Zoom level
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 0.4,
 
   // Theme
   "workbench.colorTheme": "GitHub Dark Default",
@@ -19,7 +19,7 @@ tags:
   // Font
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
 
   // Tab
   "editor.tabSize": 2,
