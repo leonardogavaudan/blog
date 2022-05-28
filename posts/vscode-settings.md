@@ -15,6 +15,12 @@ tags:
 
   // Theme
   "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorCustomizations": {
+    // Color background of currently selected line
+    "editor.lineHighlightBackground": "#1073cf2d",
+    // Color of the the two parralel lines that outline the currently focused line
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
 
   // Font
   "editor.fontFamily": "Fira Code",
@@ -30,6 +36,7 @@ tags:
   "vsicons.presets.hideFolders": false,
 
   // Code formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -42,16 +49,12 @@ tags:
   "explorer.confirmDragAndDrop": false,
 
   // Workbench
+  // Doesn't show the welcome page each time you open vscode
+  // https://www.youtube.com/watch?v=U9mTfMe1Ke8
   "workbench.startupEditor": "none",
   // False = files are opened in tabs that do not disappear after opening another file, they are not "preview tabs"
   // https://www.youtube.com/watch?v=yLsnGyh7nL8
   "workbench.editor.enablePreview": false,
-  //  NEED TO CHECK
-  "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#9fced11f"
-  },
-
   // Editor
   "editor.suggestSelection": "first",
   "editor.wordWrap": "off",
@@ -82,47 +85,21 @@ tags:
   ////////////////////////////////
 
   // Javascript
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "javascript.updateImportsOnFileMove.enabled": "always",
 
   // Typescript
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.importModuleSpecifier": "relative",
-
-  // React
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "reactSnippets.settings.prettierEnabled": true,
 
   // HTML
   "html.format.endWithNewline": true,
 
-  // CSS
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "css.lint.unknownAtRules": "ignore",
-
   // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.vscode-pylance"
+  },
   "python.linting.pylintEnabled": true,
   "python.formatting.autopep8Args": ["--max-line-length", "120"],
-
-  // JSON
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
 
   // YAML
   "yaml.schemas": {
@@ -134,5 +111,6 @@ tags:
   ////////////////
 
   // Intellicode
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
 ```
