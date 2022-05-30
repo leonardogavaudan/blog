@@ -25,13 +25,13 @@ tags:
   // Font
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 13.5,
 
   // Tab
   "editor.tabSize": 2,
 
-  // Icons
-  "workbench.iconTheme": "vs-minimal",
+  // Icon
+  "workbench.iconTheme": "vs-nomo-dark",
   "vsicons.dontShowNewVersionMessage": true,
   "vsicons.presets.hideFolders": false,
 
