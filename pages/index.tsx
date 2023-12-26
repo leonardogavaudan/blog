@@ -34,24 +34,27 @@ interface posts {
 }
 
 const Home = ({ posts }: posts) => {
+
     return (
         <div className="container mx-auto px-4 pt-8">
             <h1 className="text-3xl font-bold mb-8">Posts</h1>
             <ul className="list-disc pl-6">
-                {posts.map(({ slug, frontmatter }) => (
-                    <li key={slug} className="my-8">
-                        <Link href={`/post/${slug}`}>
-                            <a className="flex justify-between items-center">
-                                <span className="underline underline-offset-2 text-xl">
-                                    {frontmatter.title}
-                                </span>
-                                <span className="text-gray-500">
-                                    {frontmatter.date}
-                                </span>
-                            </a>
-                        </Link>
-                    </li>
-                ))}
+                {posts.sort((postA, postB) => postA.frontmatter.date > postB.frontmatter.date ? -1 : 1).map(({ slug, frontmatter }) => {
+                    return (
+                        <li key={slug} className="my-8">
+                            <Link href={`/post/${slug}`}>
+                                <a className="flex justify-between items-center">
+                                    <span className="underline underline-offset-2 text-xl">
+                                        {frontmatter.title}
+                                    </span>
+                                    <span className="text-gray-500">
+                                        {frontmatter.date}
+                                    </span>
+                                </a>
+                            </Link>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );

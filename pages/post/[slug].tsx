@@ -35,7 +35,7 @@ interface postPageProps {
 
 const PostPage = ({ frontmatter, content }: postPageProps) => {
     return (
-        <div className="prose mx-auto text-white">
+        <div className="prose mx-auto text-white custom-link-color">
             <div className="flex justify-center mb-16">
                 <span className="text-2xl grow">{frontmatter.title}</span>
                 <span className="">{frontmatter.date}</span>
