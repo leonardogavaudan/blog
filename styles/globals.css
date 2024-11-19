@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .prose a {
     color: cornflowerblue; /* No extra space before the hex code */
@@ -8,4 +8,16 @@
 
 .prose blockquote {
     color: lightsteelblue; /* No extra space before the hex code */
+}
+
+.prose h1 {
+    color: white; /* No extra space before the hex code */
+}
+
+.prose h2 {
+    color: white; /* No extra space before the hex code */
+}
+
+.prose h3 {
+    color: white; /* No extra space before the hex code */
 }
