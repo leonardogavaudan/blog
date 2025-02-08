@@ -1,5 +1,5 @@
 import { Layout } from '../components/layout';
-import '../src/styles/globals.css';
+import '../styles/globals.css';
 
 interface props {
   Component: any;
