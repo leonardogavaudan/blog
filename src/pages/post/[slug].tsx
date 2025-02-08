@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`src/posts/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
