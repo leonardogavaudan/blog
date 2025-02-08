@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync('posts');
+  const files = fs.readdirSync('src/posts');
 
   const posts = files.map((fileName) => {
     const slug = fileName.replace('.md', '');
