@@ -16,7 +16,7 @@ const Home = () => {
         <h1 className="text-3xl font-bold mb-8">Leonardo Gavaudan</h1>
         <div className="prose prose-lg prose-invert">
           <p className="mb-6">
-            Welcome to my personal website. Here you'll find my thoughts and experiences in software engineering and technology.
+            Welcome to my personal website. Here you&apos;ll find my thoughts and experiences in software engineering and technology.
           </p>
           <div className="mb-12">
             <Link href="/writings">

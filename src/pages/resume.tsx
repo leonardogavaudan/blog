@@ -320,8 +320,8 @@ const Resume = () => {
                             rel="noopener noreferrer"
                             className="text-blue-400 hover:text-blue-300"
                         >
-                            "Cyber range automation, a bedrock for AI
-                            applications"
+                            &ldquo;Cyber range automation, a bedrock for AI
+                            applications&rdquo;
                         </a>
                         <p className="text-gray-400">
                             Computer & Electronics Security Applications
