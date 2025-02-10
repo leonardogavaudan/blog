@@ -8,21 +8,23 @@ const Layout = ({ children }: layoutProps) => {
   return (
     <div className="bg-gray-900 text-white flex flex-col min-h-screen">
       <header className="bg-gray-800 mb-4 py-4">
-        <div className="container mx-auto flex justify-center">
-          <Link href="/">
-            <a className="text-white">HOME</a>
-          </Link>
-          <span className="text-white mx-auto">
-            Yet Another Brilliant Blog
-          </span>
-        </div>
+        <nav className="container mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <Link href="/">
+              <a className="text-white hover:text-gray-300 transition-colors">Home</a>
+            </Link>
+            <Link href="/writings">
+              <a className="text-white hover:text-gray-300 transition-colors">Writings</a>
+            </Link>
+            <Link href="/resume">
+              <a className="text-white hover:text-gray-300 transition-colors">Resume</a>
+            </Link>
+          </div>
+          <div className="text-white">Leonardo Gavaudan</div>
+        </nav>
       </header>
 
       <main className="grow mx-16">{children}</main>
-
-      <footer className="bg-gray-800 flex">
-        <div className="text-white mx-auto">Leonardo Gavaudan</div>
-      </footer>
     </div>
   );
 };
