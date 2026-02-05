@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.prose a {
+    color: cornflowerblue;
+}
+
+.prose blockquote {
+    color: lightsteelblue;
+}
+
+.prose h1 {
+    color: white;
+}
+
+.prose h2 {
+    color: white;
+}
+
+.prose h3 {
+    color: white;
+}
+
+/* Syntax highlighting containers (rehype-pretty-code) */
+[data-rehype-pretty-code-fragment] {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+[data-rehype-pretty-code-fragment] pre {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+[data-rehype-pretty-code-fragment] code {
+    display: grid;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+/* Inline code (not inside a code block) */
+.prose :where(code):not(pre code) {
+    background-color: rgba(110, 118, 129, 0.2);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+}
+
+/* Prevent prose defaults from overriding Shiki's inline styles */
+.prose pre {
+    background-color: transparent !important;
+    padding: 0 !important;
+}

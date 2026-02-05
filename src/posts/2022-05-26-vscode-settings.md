@@ -8,7 +8,7 @@ tags:
     -
 ---
 
-```
+```jsonc
 {
   // Zoom
   "window.zoomLevel": -0.5,

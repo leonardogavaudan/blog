@@ -1,5 +1,6 @@
-const Resume = () => {
-    // Email parts to prevent easy scraping
+'use client';
+
+export default function Resume() {
     const emailUser = 'leonardogavaudan';
     const emailDomain = 'gmail.com';
 
@@ -10,7 +11,6 @@ const Resume = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
-            {/* Header */}
             <header className="mb-12 text-center">
                 <h1 className="text-4xl font-bold mb-4">Leonardo Gavaudan</h1>
                 <div className="text-gray-300 space-y-1">
@@ -45,13 +45,11 @@ const Resume = () => {
                 </div>
             </header>
 
-            {/* Experience Section */}
             <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">
                     Experience
                 </h2>
 
-                {/* Modjo */}
                 <div className="mb-8">
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-xl font-medium">
@@ -62,7 +60,6 @@ const Resume = () => {
                         </span>
                     </div>
                     <p className="text-gray-400 mb-3">Paris, France</p>
-
                     <div className="space-y-4">
                         <div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">
@@ -84,7 +81,6 @@ const Resume = () => {
                                 </li>
                             </ul>
                         </div>
-
                         <div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">
                                 Deployment & Release Management
@@ -98,7 +94,6 @@ const Resume = () => {
                                 </li>
                             </ul>
                         </div>
-
                         <div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">
                                 Monitoring & Logging
@@ -112,7 +107,6 @@ const Resume = () => {
                                 </li>
                             </ul>
                         </div>
-
                         <div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">
                                 Database Optimization & Race Condition
@@ -131,7 +125,6 @@ const Resume = () => {
                                 </li>
                             </ul>
                         </div>
-
                         <div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">
                                 Type System
@@ -148,7 +141,6 @@ const Resume = () => {
                     </div>
                 </div>
 
-                {/* NukkAI */}
                 <div className="mb-8">
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-xl font-medium">
@@ -200,7 +192,6 @@ const Resume = () => {
                     </div>
                 </div>
 
-                {/* Blackstone */}
                 <div className="mb-8">
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-xl font-medium">
@@ -229,12 +220,10 @@ const Resume = () => {
                 </div>
             </section>
 
-            {/* Education Section */}
             <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">
                     Education
                 </h2>
-
                 <div className="mb-6">
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-xl font-medium">
@@ -252,7 +241,6 @@ const Resume = () => {
                         <li>Member of Columbia Taekwondo team</li>
                     </ul>
                 </div>
-
                 <div>
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-xl font-medium">
@@ -264,12 +252,13 @@ const Resume = () => {
                     <ul className="list-disc list-inside text-gray-300 mt-2">
                         <li>Math, Physics and Science Major</li>
                         <li>High Honors</li>
-                        <li>Class representative (2013-2014) & (2014-2015)</li>
+                        <li>
+                            Class representative (2013-2014) & (2014-2015)
+                        </li>
                     </ul>
                 </div>
             </section>
 
-            {/* Skills Section */}
             <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">
                     Skills
@@ -309,9 +298,10 @@ const Resume = () => {
                 </div>
             </section>
 
-            {/* Publications Section */}
             <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">Publications</h2>
+                <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">
+                    Publications
+                </h2>
                 <ul className="space-y-4">
                     <li>
                         <a
@@ -331,7 +321,6 @@ const Resume = () => {
                 </ul>
             </section>
 
-            {/* Languages, Sports and Interests Section */}
             <section>
                 <h2 className="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">
                     Languages, Sports and Interests
@@ -371,6 +360,4 @@ const Resume = () => {
             </section>
         </div>
     );
-};
-
-export default Resume;
+}
