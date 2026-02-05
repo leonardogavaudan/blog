@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import { getPostRaw, serializeDate, TocEntry, PostFrontMatter } from './posts';
 import { visit } from 'unist-util-visit';
 import { ReactElement } from 'react';
+import type { Root, Element, Nodes } from 'hast';
 
 /**
  * Custom rehype plugin that extracts h2/h3 headings into a TOC array.
@@ -13,12 +14,12 @@ import { ReactElement } from 'react';
  */
 function rehypeExtractToc(toc: TocEntry[]) {
     return () => {
-        return (tree: any) => {
-            visit(tree, 'element', (node: any) => {
+        return (tree: Root) => {
+            visit(tree, 'element', (node: Element) => {
                 if (node.tagName === 'h2' || node.tagName === 'h3') {
                     const id = node.properties?.id;
                     const text = extractText(node);
-                    if (id && text) {
+                    if (typeof id === 'string' && text) {
                         toc.push({
                             id,
                             text,
@@ -32,10 +33,10 @@ function rehypeExtractToc(toc: TocEntry[]) {
 }
 
 /** Recursively extract plain text from a HAST node. */
-function extractText(node: any): string {
+function extractText(node: Nodes): string {
     if (node.type === 'text') return node.value;
-    if (node.children) {
-        return node.children.map(extractText).join('');
+    if ('children' in node) {
+        return (node.children as Nodes[]).map(extractText).join('');
     }
     return '';
 }

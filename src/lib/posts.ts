@@ -37,7 +37,7 @@ export function getPostRaw(slug: string): string {
 }
 
 export function serializeDate(
-    data: Record<string, any>
+    data: Record<string, unknown>
 ): PostFrontMatter {
     return {
         ...data,

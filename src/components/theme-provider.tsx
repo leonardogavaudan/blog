@@ -26,6 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '(prefers-color-scheme: dark)'
         ).matches;
         const initial = stored || (prefersDark ? 'dark' : 'light');
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: defer to effect to avoid SSR hydration mismatch
         setTheme(initial);
         setMounted(true);
     }, []);
