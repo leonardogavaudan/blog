@@ -1,41 +1,56 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
     content: [
         './src/app/**/*.{js,ts,jsx,tsx}',
         './src/components/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+                serif: ['var(--font-serif)', 'Georgia', 'serif'],
+            },
+            keyframes: {
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(16px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+            },
+            animation: {
+                'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+            },
             typography: {
                 DEFAULT: {
                     css: {
-                        color: '#ffffff',
+                        '--tw-prose-body': 'var(--text-primary)',
+                        '--tw-prose-headings': 'var(--text-primary)',
+                        '--tw-prose-links': 'var(--accent)',
+                        '--tw-prose-bold': 'var(--text-primary)',
+                        '--tw-prose-code': 'var(--text-primary)',
+                        '--tw-prose-quotes': 'var(--text-secondary)',
+                        '--tw-prose-quote-borders': 'var(--border)',
+                        '--tw-prose-counters': 'var(--text-secondary)',
+                        '--tw-prose-bullets': 'var(--text-secondary)',
+                        '--tw-prose-hr': 'var(--border)',
+                        '--tw-prose-th-borders': 'var(--border)',
+                        '--tw-prose-td-borders': 'var(--border)',
+                        color: 'var(--text-primary)',
                         a: {
-                            color: '#60a5fa',
+                            color: 'var(--accent)',
                             '&:hover': {
-                                color: '#93c5fd',
+                                color: 'var(--accent-hover)',
                             },
                         },
-                        h1: {
-                            color: '#ffffff',
-                        },
-                        h2: {
-                            color: '#ffffff',
-                        },
-                        h3: {
-                            color: '#ffffff',
-                        },
-                        h4: {
-                            color: '#ffffff',
-                        },
-                        strong: {
-                            color: '#ffffff',
-                        },
-                        code: {
-                            color: '#ffffff',
-                        },
+                        h1: { color: 'var(--text-primary)' },
+                        h2: { color: 'var(--text-primary)' },
+                        h3: { color: 'var(--text-primary)' },
+                        h4: { color: 'var(--text-primary)' },
+                        strong: { color: 'var(--text-primary)' },
+                        code: { color: 'var(--text-primary)' },
                         blockquote: {
-                            color: '#d1d5db',
-                            borderLeftColor: '#4b5563',
+                            color: 'var(--text-secondary)',
+                            borderLeftColor: 'var(--border)',
                         },
                     },
                 },

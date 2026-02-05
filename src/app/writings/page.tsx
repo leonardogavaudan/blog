@@ -9,19 +9,37 @@ export default function Writings() {
     );
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold mb-8">Writings</h1>
-            <div className="space-y-8">
-                {posts.map((post) => (
-                    <article key={post.slug} className="group">
+        <div>
+            <div className="mb-10">
+                <h1
+                    className="font-serif text-3xl sm:text-4xl font-medium tracking-tight"
+                    style={{ color: 'var(--text-primary)' }}
+                >
+                    Writings
+                </h1>
+            </div>
+
+            <div className="space-y-4">
+                {posts.map((post, index) => (
+                    <article
+                        key={post.slug}
+                        className="animate-fade-in-up"
+                        style={{ animationDelay: `${(index + 1) * 0.1}s`, opacity: 0 }}
+                    >
                         <Link
                             href={`/writings/${post.slug}`}
-                            className="block group-hover:opacity-75 transition-opacity"
+                            className="block rounded-xl p-5 card-hover group"
                         >
-                            <h2 className="text-2xl font-semibold mb-2">
+                            <h2
+                                className="font-serif text-xl font-medium mb-2 transition-colors duration-200 group-hover:text-[var(--accent)]"
+                                style={{ color: 'var(--text-primary)' }}
+                            >
                                 {post.frontMatter.title}
                             </h2>
-                            <div className="flex items-center space-x-3 text-gray-500 text-sm">
+                            <div
+                                className="flex items-center gap-2 text-sm"
+                                style={{ color: 'var(--text-tertiary)' }}
+                            >
                                 <time>
                                     {new Date(
                                         post.frontMatter.date
@@ -31,11 +49,16 @@ export default function Writings() {
                                         day: 'numeric',
                                     })}
                                 </time>
-                                <span>&middot;</span>
+                                <span style={{ color: 'var(--accent)' }}>
+                                    &middot;
+                                </span>
                                 <span>{post.readingTime}</span>
                             </div>
                             {post.frontMatter.description && (
-                                <p className="mt-2 text-gray-600">
+                                <p
+                                    className="mt-3 text-sm leading-relaxed"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                >
                                     {post.frontMatter.description}
                                 </p>
                             )}
