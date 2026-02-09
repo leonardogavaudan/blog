@@ -49,6 +49,19 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ─── Prose body text ─── */
+.prose {
+    color: var(--text-secondary);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.prose strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 /* ─── Prose link styling ─── */
 .prose a {
     color: var(--accent);

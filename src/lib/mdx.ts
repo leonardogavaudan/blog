@@ -1,4 +1,5 @@
 import { compileMDX } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import readingTime from 'reading-time';
@@ -57,6 +58,7 @@ export async function getPostBySlug(slug: string): Promise<{
         source: content,
         options: {
             mdxOptions: {
+                remarkPlugins: [remarkGfm],
                 rehypePlugins: [
                     rehypeSlug,
                     [
